@@ -24,7 +24,7 @@ Yuan
 Jam
 Todoroki
 Chatrin
-Koseki
+#Koseki
 YuChen
 Yan
 Sugiyama

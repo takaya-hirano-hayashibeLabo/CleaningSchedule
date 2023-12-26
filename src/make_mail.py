@@ -2,6 +2,8 @@ import sys
 from pathlib import Path
 ROOT=str(Path(__file__).parent.parent)
 sys.path.append(ROOT)
+import os 
+import webbrowser
 
 import pandas as pd
 import re
@@ -21,9 +23,10 @@ def main():
 
     with open(f"{ROOT}/output/mail.html","w",encoding="utf-8") as f:
         f.writelines(content)
-    msg="\n=== Check below link!! ==========================="
+    msg="\n=== Open below link!! ==========================="
     print(msg)
-    print("http://127.0.0.1:5500/output/mail.html")
+    print(f"{ROOT}/output/mail.html")
+    webbrowser.open_new_tab(f"file:///{ROOT}/output/mail.html")
     print("="*(len(msg)-1))
     #===
 

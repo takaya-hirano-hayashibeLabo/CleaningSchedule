@@ -38,7 +38,6 @@ python src/make_mail.py
 ~~~
 
 #### 4.2 メールのテンプレをコピー
-http://127.0.0.1:5500/output/mail.html にアクセス.  
 表示された内容を全選択してgmailにコピペ.  
 (表示できないときは`output/mail.html`をchromeかなんかで表示する.)  
 表示される内容は, `resource/mail_template.html`に1周目の日付とシフトテーブルを追加したもの.

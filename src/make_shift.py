@@ -3,6 +3,7 @@ from pathlib import Path
 ROOT=str(Path(__file__).parent.parent)
 sys.path.append(ROOT)
 
+import os
 import pandas as pd
 import argparse
 import datetime
@@ -39,7 +40,15 @@ def main():
     print(shift)
     print("="*len(msg))
 
-    shift.to_csv(f"{ROOT}/output/shift.csv",index=False,encoding="utf-8")
+    output_file_path=f"{ROOT}/output/shift.csv"
+
+    #-- いちおうバックアップは取っておく
+    if os.path.isfile(output_file_path):
+        shift_prev=pd.read_csv(output_file_path)
+        shift_prev.to_csv(f"{ROOT}/output/shift_backup.csv",index=False,encoding="utf-8")
+    #--
+
+    shift.to_csv(output_file_path,index=False,encoding="utf-8")
     #===
 
 
