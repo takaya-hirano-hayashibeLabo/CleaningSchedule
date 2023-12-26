@@ -19,6 +19,13 @@ def main():
 
     content=re.sub("%START_DATE",shift["date"].values[0],template)
     content=re.sub("%SHIFT",shift.to_html(index=False,header=False),content)
+
+    #>> 送信者の情報設定 >>
+    with open(f"{ROOT}/resource/admin_profile.txt","r",encoding="utf-8") as f:
+        admin_profile="<br>".join(f.readlines())
+    content=re.sub("%ADMIN_PROFILE",admin_profile,content)
+    #>> 送信者の情報設定 >>
+
     # print(content)
 
     with open(f"{ROOT}/output/mail.html","w",encoding="utf-8") as f:
