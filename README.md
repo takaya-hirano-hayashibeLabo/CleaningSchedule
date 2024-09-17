@@ -1,6 +1,8 @@
-# 掃除当番のシフト&送信用メールを作るプログラム
+# 掃除当番のシフト&送信用メール作成ツール
 
 ## 使い方
+<img src="uml/tool_usage.svg" alt="usage" width="50%">
+
 ### 1. 情報用意
 
 #### 1.1 研究室のメンバー情報を準備
@@ -38,7 +40,7 @@ pip install pandas
 python src/make_shift.py --start_date 2023/10/2
 ~~~
 #### 3.2 シフトの調整
-シフトは`/output/shift.csv`にランダムに作成される.  
+シフトは`output/shift.csv`に作成される.  
 このCSVをいじれば、自分のシフトを都合のいい週に調整できる.
 
 ### 4. メールのテンプレ作成
@@ -48,8 +50,9 @@ python src/make_shift.py --start_date 2023/10/2
 ~~~bash
 python src/make_mail.py
 ~~~
+実行結果はブラウザで表示される.
 
 #### 4.2 メールのテンプレをコピー
 表示された内容を全選択してgmailにコピペ.  
-(表示できないときは`output/mail.html`をchromeかなんかで表示する.)  
 表示される内容は, `resource/mail_template.html`に1周目の日付とシフトテーブルを追加したもの.
+(表示できないときは`output/mail.html`をchromeかなんかで表示する.)  

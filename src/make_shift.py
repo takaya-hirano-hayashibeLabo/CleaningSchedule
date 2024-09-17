@@ -22,7 +22,7 @@ def main():
     with open(f"{ROOT}/resource/labo_member.txt","r", encoding="utf-8") as f:
         labo_members=[]
         for line in f.readlines():
-            if not "#"==line[0]:
+            if not "#"==line[0] and not "\n"==line:
                 labo_members.append(line)
         labo_members:list="".join(labo_members).split("\n")
     random.shuffle(labo_members) #メンバーリストをシャッフル

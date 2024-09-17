@@ -30,11 +30,13 @@ def main():
 
     with open(f"{ROOT}/output/mail.html","w",encoding="utf-8") as f:
         f.writelines(content)
-    msg="\n=== Open below link!! ==========================="
-    print(msg)
+
+    msg="= Open below link!! ================================================="
+    print("\n\033[96m"+msg+"\033[0m")
     print(f"{ROOT}/output/mail.html")
+    
     webbrowser.open_new_tab(f"file:///{ROOT}/output/mail.html")
-    print("="*(len(msg)-1))
+    print("\033[96m"+"="*(len(msg))+"\033[0m")
     #===
 
 if __name__=="__main__":
