@@ -1,7 +1,7 @@
 # 掃除当番のシフト&送信用メール作成ツール
 
 ## 使い方
-<img src="uml/tool_usage.svg" alt="usage" width="80%">
+<img src="uml/tool_usage.svg" alt="usage" width="90%">
 
 ### 1. 情報用意
 
