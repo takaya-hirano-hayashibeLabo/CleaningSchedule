@@ -1,0 +1,2 @@
+FIRST_WEEK_SUBJECT=New HayashibeLab Cleaning Schedule
+REMIND_WEEK_SUBJECT=Reminder HayashibeLab Cleaning Schedule

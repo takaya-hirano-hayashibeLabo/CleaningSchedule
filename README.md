@@ -56,3 +56,16 @@ python src/make_mail.py
 表示された内容を全選択してgmailにコピペ.  
 表示される内容は, `resource/mail_template.html`に1周目の日付とシフトテーブルを追加したもの.
 (表示できないときは`output/mail.html`をchromeかなんかで表示する.)  
+
+
+### 5. メールを定期送信化
+windowsの定期実行機能にセットすることで、自動でメールを送るようにすることが可能  
+※これは慣れてないと、ちょっと難しめ
+
+#### 5.1 Gmailアドレスなどの設定
+`envs.txt`内に環境変数を追加する
+~~~bash
+AP_PASSWORD=aaaaaaaaaaaaaaaaaa
+MY_GMAIL_ADDRESS=takashi@dc.tohoku.ac.jp
+TO_GMAIL_ADDRESS=yamada@dc.tohoku.ac.jp
+~~~
