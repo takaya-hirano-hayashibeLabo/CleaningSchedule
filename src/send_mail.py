@@ -76,7 +76,7 @@ def get_subject(subjectpath,today, shift_date):
 def main():
 
     today=datetime.strftime(datetime.today().date(),"%Y-%m-%d")
-    today="2024-10-07"
+    # today="2024-10-07"
 
     shiftpath=ROOT/"output/shift.csv"
     shift=load_shift(shiftpath)
